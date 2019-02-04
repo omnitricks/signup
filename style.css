@@ -1,0 +1,90 @@
+/*login*/
+body{
+    background: #F8F9FA;
+    font-family: sans-serif;
+}
+
+.edit{
+	display: block;
+	padding: 20px;
+}
+
+.main-section{
+	margin: 0 auto;
+	margin-top: 100px;
+	padding: 0;
+	height: 180px;
+}
+
+.user-img{
+	margin-top: -100px;
+	display: block;
+}
+
+
+.h1{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.lb{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.form-group input{
+	width: 100%;
+	margin-bottom: 20px;
+	border: none;
+	border-bottom: 1px solid #000;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #000;
+	font-size: 16px;
+}
+
+#strength{
+	width: 200px;
+	color: #16A085;
+}
+button{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #151719;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 20px;
+	width: 100%;
+	margin-top: 40px;
+}
+
+button:hover
+{
+	cursor: pointer;
+	background: #16A085;
+	color: #000;
+}
+
+.forgot{
+	padding-bottom: 10px;
+}
+
+.forgot a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: #a9a9a9;
+	padding-bottom: 30px;
+}
+
+.forgot a:hover
+{
+	color: #16A085;
+}

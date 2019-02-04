@@ -1,0 +1,101 @@
+<html>
+<head>
+	<title>Sign-up Design</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-5 main-section">
+			<div class="modal-content edit">
+				<p class="h1">Sign-up Here</p>
+				
+				<form class="form-group">
+					<div class="row">
+						<div class="col-md-6">
+							<label class="lb">Last Name:</label>
+							<input type="text" name="fname" class="form-control" placeholder="Enter Organization">
+						</div>
+						
+						<div class="col-md-6">
+							<label class="lb">Fist Name:</label>
+							<input type="text" name="lname" class="form-control" placeholder="Enter Username">
+						</div>
+					</div>
+					
+					<label class="lb">Email:</label>
+					<input type="email" name="email" class="form-control" placeholder="Enter Email">
+					
+					<div class="row">
+						<div class="col-md-6">
+							<label class="lb">Password:</label>
+							<input type="password" id="password" name="password" class="form-control" placeholder="Enter Password">
+						</div>
+						
+						<div class="col-md-6">
+							<label class="lb">Password Strength:</label>
+							<progress max = "100" value="0" id="strength"></progress>
+						</div>
+					</div>
+					
+					<select class="form-control">
+						<option>Choose Gender</option>
+						<option>Male</option>
+						<option>Female</option>
+					</select>
+					
+					<button class="btn btn-lock"><i class="fas fa-sign-up-alt"></i>Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+	<script type="text/javascript">
+		const pass = document.getElementById("password");
+		pass.addEventListener('keyup',function() {
+			checkPassword(pass.value);
+		})
+		function checkPassword(password) {
+			const strengthBar = document.getElementById("strength");
+			let strength = 0;
+			if(password.match(/[a-zA-Z0-9][a-zA-Z0-9]+/)){
+				strength += 1;
+			}
+			if (password.match(/[<>?]+/)){
+				strength += 1;
+			}
+			if (password.match(/[!@#$%^&*()]+/)){
+				strength += 1;
+			}
+			if(password.length > 5){
+				strength += 1;
+			}
+			switch(strength){
+				case 0:
+					strengthBar.value=0;
+					break
+				case 1:
+					strengthBar.value=40;
+					break
+				case 2:
+					strengthBar.value=60;
+					break
+				case 3:
+					strengthBar.value=80;
+					break
+				case 4:
+					strengthBar.value=100;
+					break
+			}
+		}
+	</script>
+
+</html>
